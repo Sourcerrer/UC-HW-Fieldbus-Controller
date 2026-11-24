@@ -1,0 +1,20 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "179e4a5f-0ae3-4686-bc6b-68dc004038cf")
+	(paper "A3")
+	(title_block
+		(title "Fieldbus controller — MCU card, STM32H573VIT6")
+		(date "2026-11-24")
+		(rev "draft")
+		(company "Universal Controller")
+		(comment 1 "UC-HW-Fieldbus-Controller")
+	)
+	(lib_symbols)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

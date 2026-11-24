@@ -1,0 +1,20 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "5a5ab27f-a20d-4939-8c91-9be0386f0b60")
+	(paper "A3")
+	(title_block
+		(title "Fieldbus controller — MCU card template")
+		(date "2026-11-24")
+		(rev "draft")
+		(company "Universal Controller")
+		(comment 1 "UC-HW-Fieldbus-Controller")
+	)
+	(lib_symbols)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
