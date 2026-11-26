@@ -1,6 +1,6 @@
 # UC-HW-Fieldbus-Controller — Fieldbus controller hardware
 
-The Fieldbus controller of the Universal Controller family: base card (DC-DC and power stage, 6 AI, 10 DI, 8 relays, 4 high-side + 4 low-side outputs, motor-driver provision, isolated RS-485 and CAN-FD, stack bus, terminals) plus a raised plug-in MCU card (MCU, Ethernet, USB-C, NOR, RTC, LED).
+The Fieldbus controller of the Universal Controller family: base card (DC-DC and power stage; model with Ethernet: 4 AI, 6 DI; model without Ethernet: 6 AI, 10 DI, 2 extra outputs; both: 6 relays, 4 high-side outputs, isolated RS-485 and CAN-FD, stack bus, terminals) plus a raised plug-in MCU card (MCU, Ethernet on the model with Ethernet, USB-C, NOR, RTC, LED). Motor control is a separate motor-control card (PRD IO-10 update 5).
 
 This repo holds its schematics, PCBs, bill of materials, mechanical CAD and production guidelines. Requirements live in the umbrella repo `Universal-Controller_Hardware`, in `docs/arch/docs/01_Requirements_PRD.md` (BASE-1 to BASE-11, IO-1 to IO-10, FB-1 to FB-5, PWR-10); the shared interfaces (stack bus, 4G UART link, battery socket, power stage, enclosure family) in `docs/arch/docs/02_Specifications.md`.
 
@@ -10,8 +10,8 @@ This repo holds its schematics, PCBs, bill of materials, mechanical CAD and prod
 |---|---|---|
 | `base-card/` | Base card | not started |
 | `mcu-card-template/` | Template every MCU card starts from | not started |
-| `mcu-card-stm32c5/` | MCU card, STM32C5A3VGT6 — standard build | not started |
-| `mcu-card-stm32h5/` | MCU card, STM32H573VIT6 — option (PSA L3) | not started |
+| `mcu-card-stm32c5/` | MCU card, STM32C5A3VGT6 — model without Ethernet; too small for the model with Ethernet (PRD BASE-10 update 10) | not started |
+| `mcu-card-stm32h5/` | MCU card, STM32H563VIT6 / H573VIT6 (same LQFP100 pinout; also takes H523 / H533 / H562) — model with Ethernet and the 5 prototypes (H563); H573 for PSA L3 | not started |
 
 The optional battery + charger board has its own repo (`UC-HW-Battery-Board`).
 

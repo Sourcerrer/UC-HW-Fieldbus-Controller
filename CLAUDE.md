@@ -9,7 +9,7 @@ Read first, from the umbrella repo (this repo sits at `modules/fieldbus-controll
 - The MCU-card interface (`docs/mcu-card-interface.md` + `docs/card-interface.csv`) is the contract between them. It is MCU-neutral: every signal is a function any candidate MCU provides. Change it only by bumping its version; v1 freezes with the first base-card fab.
 - Every MCU card starts from `mcu-card-template/`; only the MCU sheet is new. The sheets around the MCU (NOR, RTC, Ethernet, USB-C, LED, card connector) are shared circuit blocks.
 - Card-connector nets use the signal names from `card-interface.csv` (prefix `IF_`). Run the interface check (`lib/tools/`) on the base card and every MCU card after any change.
-- Standard build: STM32C5A3VGT6 card. Option: STM32H573VIT6 card. Motor drivers (2 × DRV8873S) are a provision: DNP in the standard build.
+- MCU cards: the STM32H5 card (H563 / H573, same pinout) for the model with Ethernet (≥ 2 MB flash / ≥ 640 KB RAM, PRD BASE-10 update 10) and the 5 prototypes (H563); the STM32C5A3 card (or the H5 card with an H523) for the model without Ethernet — the standard pick is still open. Motor control is a separate motor-control card (IO-10 update 5); the DRV8873S provision on the base card is gone.
 
 ## KiCad
 - KiCad 10; projects sit one level below the repo root, so library paths start with `${KIPRJMOD}/../lib/`.
